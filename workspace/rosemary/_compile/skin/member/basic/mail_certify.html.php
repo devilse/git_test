@@ -1,0 +1,37 @@
+<?php /* Template_ 2.2.7 2013/01/15 16:37:36 C:\rosemary\trunk\src\rosemary\_template\skin\member\basic\mail_certify.html 000002065 */ ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>라이패스LS</title>
+<meta name="author" content="nanumcommunications"/>
+<meta name="robots" content="all"/>
+<meta name="keywords" content="nanumcommunications, 나눔커뮤니케이션즈, 자격증, license, Lipass, 국가기술자격증, 학점인정, 학위취득, 공무원, 국가기술, 유망자격증, 교수, 강좌, 기능사, 기사, 산업기사"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="/_template/skin/member/basic/css/mail.css"/>
+</head>
+<body>
+<div id="wrap_mail">
+<h1><img src="/_template/skin/member/basic/images/mail/mail_top.gif" alt="라이패스" /></h1>
+<h2>라이패스 회원가입 안내메일입니다.</h2>
+<div class="mail_box">
+<!-- 본문내용_메일종류에따라 클래스명이 달라짐 -->
+<div class="certify">
+<p>
+안녕하세요. 라이패스 관리자입니다.<br />
+본 메일은 라이패스 회원의 이메일 가입인증 위한 안내 메일입니다.<br /><br />
+아래 링크를 클릭하여 이메일 인증을 진행 해 주시길 바랍니다.<br /><br /><br />
+링크<br />
+<a href="#">http://www.lipass.co.kr/0032CW_?d/ldoe8022837_?PDCO</a><br /><br />
+<span class="txt_b">회원가입 오류 문의전화 1577-1212</span>
+</p>
+</div>
+<!-- 본문내용 끝 -->
+<ul class="mail_footer">
+<li>본 메일은 발신전용 메일로 회신이 되지 않습니다. 문의사항은 라이패스 <span>[고객센터]</span>를 이용하여 주시기 바랍니다.</li>
+<li>메일 수신을 원하지 않으시면 <span>[수신거부]</span>를 클릭해 주십시오.</li>
+</ul>
+</div>
+<img src="/_template/skin/member/basic/images/mail/mail_footer.gif" alt="" />
+</div>
+</body>
+</html>

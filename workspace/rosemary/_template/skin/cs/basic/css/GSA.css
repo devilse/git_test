@@ -1,0 +1,56 @@
+/****************************************************************************
+*		제작업체 : 주식회사 나눔커뮤니케이션즈
+*		제작일시 : 2012년 10월 31일
+*		연락처 : yumijin89@naver.com
+*		담당자 : 유미진
+*		기타사항 : 유지보수시 궁금한 사항이 있으면 이메일을 통해 문의 바랍니다.
+*****************************************************************************/
+@charset "utf-8";
+
+/* common */
+.common{float:left; margin-top:20px;}
+.com_tab{width:952px; height:40px; background:url(../images/common/com_tab.gif)no-repeat;}
+.com_tab ul{text-align:right; padding:8px 10px 0 0;}
+.com_tab li{display:inline; margin:0 14px;}
+.com_schtitle{margin-top:25px;}
+.com_schtitle img{vertical-align:middle; margin:-3px 3px 0 0;}
+.ca_01{margin-top:40px;}
+.ca_list01{width:100%; margin-top:10px; }
+.ca_list01 li{padding:10px; line-height:190%;}
+.ca_list01 li font{font-weight:bold;}
+.ca_list01 li img{vertical-align:middle; margin-top:-3px;}
+.ca_top{border-top:1px solid #dedede; padding-top:20px;}
+.com_sj{padding:0 13px;}
+.list_s{padding:0 18px;}
+.pay_btn{text-align:right; font-weight:bold; margin:-35px 20px 0 0;}
+.pay_btn span{margin-right:30px;}
+
+.bod_04{width:100%; font-size:11px; background-color:#f2f2f2; border-top:1px solid #d7d7d7; letter-spacing:0.07em; }
+.bod_04 th{height:70px; color:#151515; border-bottom:1px dotted #d7d7d7; text-align:left; text-indent:2em;}
+.bod_04 td{border-bottom:1px dotted #d7d7d7; color:#565656; font-size:12px;}
+.bod_04 td ul li{line-height:0;}
+.t_foot th{height:50px; background-color:#e7e7e7; border-top:1px solid #aba7a7; border-bottom:1px solid #aba7a7; font-size:12px; letter-spacing:0.01em;}
+.ft_pay{font-size:12px; color:#474747;}
+.ft_pay font{color:#803400;}
+.ft_pay02{text-align:right; padding-right:30px;}
+.th_list{margin-top:20px;  font-size:12px;}
+.th_list li{float:left; margin:0 30px 50px 30px;}
+.th_list h3{font-size:14px; margin:13px 0 5px 0;}
+.th_list h3 span{color:#e87903;}
+.th_list02{margin-top:20px;  font-size:11px;}
+.th_list02 li{float:left; margin:0 20px 50px 20px;}
+.th_list02 h3{font-size:13px; margin-top:11px;}
+.th_list02 h3 span{color:#e87903;}
+.th_name{width:50px; background-color:#939393; border:1px solid #7f7f7f; color:#fff;  padding:2px 3px; text-align:center;}
+.img_th{width:36px; height:37px; margin:10px 10px 10px 0; float:left; border:1px solid #d6d6d6;}
+.img_th02{width:71px; height:82px; margin:10px 10px 10px 0; float:left; border:1px solid #d6d6d6;}
+.th_btn{clear:both;}
+.key_list{line-height:180%; margin-top:15px;}
+.key_list li{text-indent:0.5em;}
+.key_list span{color:#e87903;}
+.key_list font{color:#59a10e;}
+
+
+/* style */
+.ft_org{color:#e87903;}
+.blt{color:#d00322; font-size:11px;}

@@ -1,0 +1,69 @@
+<form name="list_goods_form_{g_num}" >
+
+<input type="hidden" name="g_num" value="{g_num}">
+<input type="hidden" name="wan_price_{g_num}" value="0" id="wan_price_{g_num}">
+<input type="hidden" name="wan_book_{g_num}" id="wan_book_{g_num}" value="0">
+<input type="hidden" name="wan_goods_{g_num}" id="wan_goods_{g_num}" value="0">
+								
+								<table cellspacing="0" cellpadding="0" border="0" summary="board" class="re_bod02">
+									<caption></caption>
+									<colgroup>
+										<col width="12%" />
+										<col width="3%" />
+										<col width="9%" />
+										<col width="60%" />
+										<col width="14%" />
+									</colgroup>
+									<tfoot>
+										<tr class="re_foot">
+											<td><img src="images/sub/th_blt.gif" alt="" />총결제금액</td>
+											<td colspan="4" class="t_right02">강좌 : <span id="goods_money_{g_num}">0</span>원 + 교재 : <span id="book_money_{g_num}">0</span>원 = <span id="tot_money_{g_num}">0</span>원
+												<input class="brown_btn02" type="button" value="결제하기" onclick="send_list_goods_pay(this.form,'{g_num}','','{MY_URL}')" />
+												<input name="" class="gray_btn" type="button" value="강의담기" />
+											</td>
+										</tr>
+									</tfoot>
+									<tbody>
+
+
+
+
+
+	{@subject_loop}
+										<tr>
+											{?.number==1}<th rowspan="{subject_nums}" class="re_th">온라인강의</th>{/}
+											<td><input type="checkbox" name="set_goods_{.lt_num}" id="set_goods_{.lt_num}" value="{.h_price}" class="checkbox" onclick="list_sel_goods('{g_num}',this.value,'{.lt_num}','goods')" /></td>
+											<td>{?.sample_cnt}<a href="#"><img src="images/sub/btn_mvi.gif" alt="맛보기" /></a>{/}</td>
+											<td class="t_left"><b>{.lt_name}</b> ({.mb_name} / 수강기간 {.lt_term}일 / 강좌수 {.period_cnt}강) {?g_discount_rate > 0}- <span class="ft_red">{g_discount_rate}% 할인적용</span>{/}</td>
+											<td>{.number_format_h_price}원</td>
+										</tr>
+	{/}
+
+
+
+
+{?book_nums > 0}
+	{@book_loop}
+
+										<tr class="b_top">
+											{?.number==1}<th rowspan="{book_nums}" class="re_th02">교재</th>{/}
+											<td><input type="checkbox" name="set_book_{.bo_num}" id="set_book_{.bo_num}" value="{.bo_price}" class="checkbox" onclick="list_sel_goods('{g_num}',this.value,'{.bo_num}','book')" /></td>
+											<td><a href="#">{?.bo_img}<img src="{MY_URL}/dir_img/books_img/{.bo_img}" alt="" width="100" height="100" />{:}<img src="images/sub/img_book.gif" />{/}</a></td>
+											<td class="t_left"><b>{.bo_name}</b> ({.bo_publisher} / 저자 {.bo_writer})</td>
+											<td>{.bo_selling_price}원</td>
+										</tr>
+	{/}
+{/}
+
+
+
+
+										<tr class="b_top">
+											<th>강의특전</th>
+											<td></td>
+											<td colspan="3" class="t_left t_ind">{g_benefit}</td>
+										</tr>
+									</tbody>
+								</table>
+
+</form>

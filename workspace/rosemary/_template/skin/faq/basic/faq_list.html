@@ -1,0 +1,124 @@
+<link rel="stylesheet" type="text/css" href="css/board.css"/>
+<script type = "text/javascript">
+
+	function send_view(val){
+		var submenu = document.getElementById(val);
+		var f = document.sel_form;
+		if(submenu.style.display == "none"){
+			submenu.style.display="block"
+			if(f.y_sel.value == ""){
+				f.y_sel.value = val;
+			}else{
+				var y_menu=document.getElementById('y_sel');
+				
+				var submenu2 = document.getElementById(y_menu.value);
+				submenu2.style.display="none";
+				f.y_sel.value = val;
+			}
+		}else{
+			submenu.style.display="none";
+		}
+	
+	}
+	function search_go()
+	{
+		var f = document.search_form;
+		if (f.searchword.value == "") {
+			alert("검색하실 단어를 입력해 주세요.");
+			f.searchword.focus();
+			return;
+		} else {
+			var value = f.searchword.value;
+			var val = value.trim();
+
+			if (val ==''||val.length <2) {
+				alert('검색할 단어를 2자이상 입력해주세요');
+				f.searchword.focus();
+				return;
+			} else {
+				f.action = "./index.php";
+				f.submit();
+			}
+		}		
+	}
+
+	function change_mal(val){
+		if (!val) {
+			document.location.href="./index.php";
+		} else {
+			document.location.href="./index.php?sel_mal="+val;
+		}
+		
+	}
+</script>
+<form name = "sel_form">
+<input type = "hidden" name = "y_sel" id = "y_sel" value ="{first_num}">
+</form>
+		<!-- LS 우측 컨텐츠  영역 시작 -->
+		<div class="s_r_area">
+
+			<!-- LS 우측 컨텐츠  영역 헤드 시작 -->
+			<div class="sr_head">
+				<h3><img src="images/sr_title.gif" alt="가스" /></h3>
+				<p><span> 국가기술자격증 </span>><span> 기술사/기능장 </span>><span> 가스 </span></p>
+			</div>
+			<!-- LS 우측 컨텐츠  헤드 끝 -->
+
+			<!-- LS 우측 컨텐츠  본문 시작 -->
+			<div class="sr_body">
+		
+				<!-- 자주묻는질문 -->
+					<h4><img src="images/board/bod_blt.gif">자주묻는질문 게시판은 Lipass 회원들이 가장 많이 묻는 질문을 모아둔 게시판 입니다.</h4>
+
+					<div class="bod_faq">
+						<ul class="bod_faq_tab">
+							<li {?!sel_mal}class="faq_01"{:}class="faq_02"{/}><h3><a href="javascript:change_mal()">전체</a></h3></li>
+							<li {?sel_mal == "1"}class="faq_01"{:}class="faq_02"{/}><h3><a href="javascript:change_mal(1)">동영상</a></h3></li>
+							<li {?sel_mal == "2"}class="faq_01"{:}class="faq_02"{/}><h3><a href="javascript:change_mal(2)">사이트</a></h3></li>
+							<li {?sel_mal == "3"}class="faq_01"{:}class="faq_02"{/}><h3><a href="javascript:change_mal(3)">결제</a></h3></li>
+							<li {?sel_mal == "4"}class="faq_01"{:}class="faq_02"{/}><h3><a href="javascript:change_mal(4)">회원정보</a></h3></li>
+							<li {?sel_mal == "5"}class="faq_01"{:}class="faq_02"{/}><h3><a href="javascript:change_mal(5)">기타</a></h3></li>
+						</ul>
+						<ul class="bod_faq_list">
+
+{?query_number > 0}
+	{@list}
+							<li><span>[{.mal}]</span> <a href = "javascript:send_view('{.faq_num}')">{.title}</a></li>
+							<div class="bod_faq_a" id = "{.faq_num}" style="display:{.div_view}">
+								{.contents}
+								<p>원하시는 답변을 찾지 못하셨다면, 1:1상담하기를 이용해 주세요.<input type="button" name="bod_btn_gray02" class="bod_btn_gray02" value="1:1상담 바로가기"  /></p>
+							</div>
+	{/}
+{:}
+							<li align="center">등록된 내용이 없습니다.</li>	
+{/}
+
+
+
+
+						</ul>
+						<ul class="bod_pagelist center">
+							<li>
+							{page_list}
+							</li>
+							<div class="bod_sch tdtd">
+<form name = "search_form">
+								<select class="sel_sch" name="key">
+									<option value = "title" {?key == "title"}selected{/}>제목</option>
+									<option value = "con" {?key == "con"}selected{/}>내용</option>
+									<option value = "tot" {?key == "tot"}selected{/}>제목+내용</option>
+								</select>
+								<input type="text" name="searchword" value="{searchword}" class="text_sch" style="width:150px;" /><span class="blind">검색창</span>
+								<input type="button" name="btn_sch" class="btn_sch" value="검색" onclick="search_go()" />
+</form>
+							</div>
+						</ul>
+					</div>
+				<!-- //자주묻는질문 -->
+
+			</div>
+			<!-- LS 우측 컨텐츠  본문 끝 -->
+
+
+		</div>
+

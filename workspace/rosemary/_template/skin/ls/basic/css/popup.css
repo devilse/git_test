@@ -1,0 +1,25 @@
+/****************************************************************************
+*		제작업체 : 주식회사 나눔커뮤니케이션즈
+*		제작일시 : 2012년 11월 29일
+*		연락처 : yumijin89@naver.com
+*		담당자 : 유미진
+*		기타사항 : 유지보수시 궁금한 사항이 있으면 이메일을 통해 문의 바랍니다.
+*****************************************************************************/
+@charset "utf-8";
+
+/* 팝업 */
+.b_pop{width:360px;}
+.b_top{height:63px;}
+.b_btm{height:59px;}
+.b_bg{background:url(../images/pop/bg.gif) repeat-y; text-align:center; padding:20px 0 10px 0; color:#808080; font-weight:bold;}
+.b_bg span{color:#e11534;}
+.b_bg p{font-weight:normal;}
+.b_btn{margin:15px 0 0 0;}
+.b_btn img{margin: 0 5px;}
+
+.booklist_pop{margin:0 auto;font-size:11px;font-weight:normal;font-family:'돋움',Dotum;text-align:left;padding:5px;}
+.booklist_pop tr td{padding:8px 0;border-top:1px solid #d8d8d8;border-collapse:collapse;}
+.booklist_pop tr td.bl_page{text-align:center;border-right:1px solid #d8d8d8;background-color:#f3f3f3;}
+.booklist_pop tr td.bl_tit{padding:0 0 0 10px;}
+.bd_last{border-bottom:1px solid #d8d8d8;}
+.b_list_box{width:300px;height:180px;margin:0 auto;text-align:center;overflow-x:hidden;overflow-y:scroll;scrollbar-arrow-color:#900326}

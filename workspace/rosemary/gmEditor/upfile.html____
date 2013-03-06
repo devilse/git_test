@@ -1,0 +1,164 @@
+  <?
+if($_GET['op']==1){
+	$subtitle = '이미지 삽입';
+	$title = '이미지 업로드';
+	$subtype = '';
+}
+else{
+	$subtitle = '미디어 삽입';
+	$title = '미디어 업로드';
+	$subtype = 1;
+}
+?>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=euc-kr">
+<META HTTP-EQUIV="Pragma" CONTENT="No-Cache">
+<META HTTP-EQUIV="Expires" CONTENT="0">
+<title><?=$subtitle?></title>
+<link href="http://www.filemeca.co.kr/css/basic.css" rel="stylesheet" type="text/css">
+ 
+<style type="text/css"> 
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<script language="javascript">
+<!--
+	function PathUrl(){
+		document.add_form.url.value = opener.document.getElementById("ReturnUrl").value;
+	}
+
+function imgview(){
+	var size1,size2;
+	var type = '2';
+	var tmp = new Image();
+	var key = document.getElementById('upfile').value;
+	var imgObj = document.images;
+	if(type==1) return false;
+	tmp.src = key;
+	size1 = tmp.offsetWidth;
+	size2 = tmp.height;
+	size1 = (150>=size1) ? size1 : 150;
+	size2 = (150>=size2) ? size2 : 150;
+/*
+	imgObj.Pickimg.style.display = "";
+	imgObj.Pickimg.src = key;
+	imgObj.Pickimg.width = size1;
+	imgObj.Pickimg.height = size2;
+
+	if(tmp.width>600) {
+		document.getElementById('imgsize').value = tmp.width;
+	} else if(tmp.width!=0){
+		document.getElementById('imgsize').value = tmp.width;
+	} else {
+		document.getElementById('imgsize').value = tmp.width;
+	}
+	*/
+}
+
+function send_img(){
+document.add_form.submit();
+}
+
+//-->
+</script>
+
+</head>
+
+<BODY scroll=no leftmargin="1" marginwidth="1" topmargin="1" marginheight="1" onload="PathUrl();">
+
+<link href="http://www.filemeca.co.kr/css/basic.css" rel="stylesheet" type="text/css">
+ 
+<style type="text/css"> 
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<table width="310" border="0" cellspacing="0" cellpadding="0">
+	<form name="add_form" action="upfile_ok.php" method="post" enctype='multipart/form-data'>
+	<input type="hidden" name="url">
+	<input type="hidden" name="type" value="<?=$_GET['op']?>">
+ <tr>
+ <td bgcolor="454545"  class="padding-t10 padding-b10">
+ <table width="292" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+  <td><img src="http://image.filemeca.co.kr/data/txt_up01.gif" alt="파일메카이미지업로드" width="166" height="16" /></td>
+  </tr>
+  <tr>
+  <td class="padding-t10 padding-b20"><table width="100%" border="0" cellspacing="0" cellpadding="0">
+   <tr>
+   <td><img src="http://image.filemeca.co.kr/data/up_wtop.gif" width="292" height="5" /></td>
+   </tr>
+   <tr>
+   <td bgcolor="#FFFFFF" class="padding-t5 padding-b5">
+   <table width="272" border="0" align="center" cellpadding="0" cellspacing="3">
+    <tr>
+    <td><strong>업로드 </strong>: </td>
+     <td colspan="3" valign="top">
+
+<input type="file" name="upfile" style="display:block;" align="absmiddle" onchange="imgview();" size=18> 
+
+
+</td>
+    </tr>
+   </table></td>
+   </tr>
+   <tr>
+   <td><img src="http://image.filemeca.co.kr/data/up_wfoot.gif" width="292" height="5" /></td>
+   </tr>
+  </table></td>
+  </tr>
+  <tr>
+  <td><img src="http://image.filemeca.co.kr/data/txt_up02.gif" alt="이미지 업로드 시 주의사항" width="156" height="15" /></td>
+  </tr>
+  <tr>
+  <td valign="top" class="padding-t10 padding-b10"><table width="100%" border="0" cellspacing="2" cellpadding="0">
+   <tr>
+   <td valign="top">1.</td>
+    <td>이미지를 첨부하지 않은 영상은 업로드 불가합니다.</td>
+   </tr>
+   <tr>
+   <td valign="top">2.</td>
+   <td>해당 카테고리의 성격과 맞지 않는 이미지를 첨부<br />
+   할 경우 경고 없이 게시물이 삭제 될 수 있습니다.</td>
+   </tr>
+   <tr>
+   <td>3.</td>
+   <td>성인 자료실의 이미지 첨부 삭제 기준</td>
+   </tr>
+   <tr>
+   <td>-</td>
+   <td>성기, 음모 등 신체 특정부위가 노출시</td>
+   </tr>
+   <tr>
+   <td>-</td>
+   <td>광고 및 불법사이트명 노출</td>
+   </tr>
+   <tr>
+   <td valign="top">-</td>
+   <td>모자이크를 사용하여 본인이 이미지를 감추었을<br />
+   경우</td>
+   </tr>
+  </table></td>
+  </tr>
+  <tr>
+  <td align="center"><a href="javascript:send_img()"><img src="http://image.filemeca.co.kr/data/btn_upload.gif" alt="전송" width="88" height="51" hspace="5" border="0" /></a><a href="javascript:send.close();"><img src="http://image.filemeca.co.kr/data/btn_cancel.gif" width="88" height="51" hspace="5" border="0" /></a></td>
+  </tr>
+ </table></td>
+ </tr>
+ </form>
+</table>
+
+</body>
+</html>

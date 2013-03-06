@@ -1,0 +1,9 @@
+RewriteEngine On
+
+RewriteRule ^web/index.php$ /web/main/index.php [QSA,R]
+RewriteRule ^web/?$ /web/main/index.php [QSA,R]
+RewriteRule ^web/main/?$ /web/main/index.php [QSA,R]
+#RewriteRule ^web/([a-zA-Z0-9_]+)/?$ /web/main/index.php?cs=$1 [QSA,R]
+
+RewriteRule ^web/([a-zA-Z0-9_]+)/([a-zA-Z0-9_]+)/process/([a-zA-Z0-9_]+)\.php$ /web/$2/process/$3.php?cs=$1 [QSA]
+RewriteRule ^web/([a-zA-Z0-9_]+)/((?!process)[a-zA-Z0-9_]+)/([a-zA-Z0-9_]+)\.php$ /web/$2/$3.php?cs=$1 [QSA]

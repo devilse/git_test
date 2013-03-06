@@ -1,0 +1,51 @@
+<script src="../../../../_js/goods.js" type="text/javascript"></script>
+
+<link rel="stylesheet" type="text/css" href="css/search.css"/>
+<!-- 전체영역 -->
+<div id ="wrap">
+
+<!-- 컨테이너 영역 시작 -->
+<div id="container">
+
+	<!-- COMMON 영역 시작 -->
+	<div class="common">
+
+		<div class="com_tab">
+			<ul>
+				<li><input type="checkbox" name="checkbox" class="checkbox" /><label>전체보기</label></li>
+				<li><input type="checkbox" name="checkbox" class="checkbox" /><label>동영상강의</label></li>
+				<li><input type="checkbox" name="checkbox" class="checkbox" /><label>자격증정보</label></li>
+				<li><input type="checkbox" name="checkbox" class="checkbox" /><label>학위정보</label></li>
+				<li><input type="checkbox" name="checkbox" class="checkbox" /><label>게시물</label></li>
+				<li><input type="checkbox" name="checkbox" class="checkbox" /><label>자료실</label></li>
+				<li><input type="checkbox" name="checkbox" class="checkbox" /><label>교수님소개</label></li>
+			</ul>
+		</div>
+
+		<p class="com_schtitle"><img src="images/search/com_blt.gif" /><b class="ft_org">‘경영’</b> 에 대한 검색결과입니다.</p>
+
+
+
+		<div class="ca_01 ca_top th_btn">
+			<h3>자료실 <a href="./search_list_board2.php?top_search={search_text}">더보기</a></h3>
+			<ul class="key_list">
+{?bbs_cnt2 > 0}
+				{@bbs_list2}
+				<li><b>[{.bo_name}]</b> <a href="../board/view.php?mode=board_view&bo_num={.bo_num}&list_num={.list_num}" target="_blink">{.title}</a> <font>({.reg_date})</font></li>
+				{/}
+{:}
+			<li><b>검색된 자료가 없습니다.</b></li>
+{/}
+			</ul>
+		</div>
+
+	
+
+	</div>
+	<!-- COMMON 영역 끝 -->
+
+</div>
+
+<!-- LS 컨테이너 영역 끝 -->
+
+</div>

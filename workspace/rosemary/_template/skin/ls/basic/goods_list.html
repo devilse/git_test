@@ -1,0 +1,141 @@
+<link rel="stylesheet" type="text/css" href="css/register.css"/>
+<script src="../../../../_js/goods.js" type="text/javascript"></script>
+
+
+<form name="list_form" >
+<input type="hidden" name="page" value="{page}">
+<input type="hidden" name="num">
+</form>
+
+	<!-- LS 우측 컨텐츠  영역 시작 -->
+		<div class="s_r_area02 m_left">
+
+			<!-- LS 우측 컨텐츠  영역 헤드 시작 -->
+			<div class="sr_head02">
+				<h3><img src="images/sub/register_title.gif" alt="수강신청" /></h3>
+				<p>{@ menu_location}{? menu_location.index_ > 0}<span> &gt; </span>{/}<span>{menu_location.value_}</span>{/}</p>
+			</div>
+			<!-- LS 우측 컨텐츠  헤드 끝 -->
+
+			<!-- LS 우측 컨텐츠 로그인 시작 -->
+			<div class="sr_body02">
+		
+				<!-- 수강신청 시작 -->
+				<div class="register">
+{?pack_tot_cnt > 0}
+				<!-- 패키지과정 시작 -->
+				<h3><img src="images/sub/re_title01.gif" alt="패키지과정" /></h3>
+
+	{@pack_list_loop}
+				<div class="package">
+					<img src="images/sub/save30.gif" alt="30%SAVE" /><br />
+					<ul class="package_sj">
+						<li>· {.gp_slogan}</li>
+						<li class="ft_brown">· {.gp_name}</li>
+					</ul>
+					<ul class="package_btn">
+						<li><input name="" class="white_btn02" type="button" value="자세히보기" onclick="goods_view('{.gp_num}','./package_view.php')" />
+								<input name="" class="white_btn02" type="button" value="강의담기" /></li>
+						
+					</ul>
+					<table cellspacing="0" cellpadding="0" border="0" summary="board" class="package_bod">
+						<caption></caption>
+						<colgroup>
+							<col width="20%" />
+							<col width="80%" />
+						</colgroup>
+						<tbody>
+							<tr>
+								<th>강의구성</th>
+								<td>{@goods}{goods.name}{/}</td>
+							</tr>
+							<tr>
+								<th>가격</th>
+								<td class="td_ft"><span>{.price}원</span>　{.h_price}원</td>
+							</tr>
+							<tr>
+								<th>수강 기간</th>
+								<td>{.term}일</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+	{/}
+
+				<!-- 패키지과정 끝 -->
+{/}
+				<!-- 강좌과정 시작 -->
+				<h3><img src="images/sub/re_title02.gif" alt="강좌과정" /></h3>
+				<table cellspacing="0" cellpadding="0" border="0" summary="board" class="re_bod">
+					<caption></caption>
+					<colgroup>
+						<col width="10%" />
+						<col width="41%" />
+						<col width="13%" />
+						<col width="12%" />
+						<col width="24%" />
+					</colgroup>
+					<thead>
+						<tr>
+							<th colspan="3">강의정보</th>
+							<th>가격</th>
+							<th>강의신청</th>
+						</tr>
+					</thead>
+					<tbody>
+
+{?list_cnt > 0}
+	{@list}
+						<tr>
+							<td>{?.g_state != "C"}<img src="images/sub/img_sj02.gif" />{:}<img src="images/sub/img_sj01.gif" />{/}<br /><input type="checkbox" name="sel_g_num" class="checkbox" value="{.g_num}" /></td>
+							<td class="t_left">{.g_name}<p class="ft_style02">수강기간 : {.lt_term}일 l 강좌수 : {.period_cnt}강</p></td>
+							<td><a href="javascript:view_list_option('{ca_num}','{.g_num}','{MY_URL}')"><img src="images/sub/btn_option.gif" /></a></td>
+							<td>{?.g_discount_rate > 0}<p class="ft_style02 t_line">{.number_format_price}원</p><p class="s_save"><span>{.g_discount_rate}%</span></p><br />{/}{.number_format_h_price}원 </td>
+							<td><input class="white_btn02" type="button" value="자세히보기" onclick="send_goods_view('{.g_num}','{page}','{ca_num}','{MY_URL}')" />
+									<input name="" class="white_btn02" type="button" value="강의담기" /></td>
+						</tr>
+						<tr id="goods_tr_{.g_num}" class="b_n" style="display:none">
+							<td colspan="5">
+								<div id="goods_{.g_num}" ></div>
+							</td>
+						</tr>
+
+
+	{/}
+{:}
+						<tr class="b_n"  >
+							<td colspan="5">
+								등록된 강좌가 없습니다.
+							</td>
+						</tr>
+
+{/}
+
+
+
+					</tbody>
+				</table>
+				<!-- 강좌과정 끝 -->
+<!--
+
+				<div class="re_pay">
+					<p>강좌금액 64,000원 + 교재금액 64,000원<br />
+					총결재금액 : <span>66,500원</span></p>
+				</div>
+				<p class="re_pay_btn"><input name="" class="red_btn02" type="button" value="수강신청하기" onclick="send_go()" />
+				<input name="" class="gray_btn02" type="button" value="강의담기" /></p>
+
+				</div>
+-->
+				<!-- 수강신청 끝 -->
+
+			</div>
+			<!-- LS 우측 컨텐츠 로그인 끝 -->
+			<div class="list_page">
+				<ul class="bod_pagelist02">
+					{list_page}
+				</ul>
+			</div>
+		</div>
+		<!-- LS 우측 컨텐츠  영역 끝 -->
+

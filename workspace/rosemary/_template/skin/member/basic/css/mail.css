@@ -1,0 +1,81 @@
+/****************************************************************************
+*		제작업체 : 주식회사 나눔커뮤니케이션즈
+*		제작일시 : 2013년 1월 7일
+*		담당자 : 박은지
+*		기타사항 : 유지보수시 궁금한 사항이 있으면 이메일을 통해 문의 바랍니다.
+*****************************************************************************/
+@charset "utf-8";
+
+/* 공통 부분-이동시 지울 부분 */
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,img{margin:0;padding:0}  
+body,input,textarea,select,button,table{font-family:'돋움',Dotum,AppleGothic,sans-serif;font-size:12px}
+ul,dl,li,ol,dd,dt {list-style:none}
+img,fieldset {border:0px; margin:0; padding:0}
+a{text-decoration:none}
+a:hover,a:active,a:focus,a:link{color:#e31736;}  
+address{font-style:normal; color:#858585}
+input{color:#333; border:0; outline:none}
+textarea{scrollbar-arrow-color:#900326}
+.blind,legend{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}
+
+/* 이메일폼 */
+#wrap_mail{width:730px;margin:0;padding:0;}
+.mail_box{width:730px;background:url(../images/mail/bg_txt.gif) repeat-y;margin:0;padding:0;line-height:170%;}
+h2{width:730px;height:54px;background:url(../images/mail/bg_mail_tit.gif) no-repeat;font-size:14px;color:#fff;margin:0;padding:10px 0 0 0;text-align:center;}
+
+
+/* 이메일인증 */
+.certify{width:700px;min-height:200px;margin:0;padding:0 15px 40px 15px;background:url(../images/mail/bg_email.gif) no-repeat 480px top;}
+.certify p{width:440px;margin:0 0 0 10px;padding:0;}
+
+.txt_b{font-weight:bold;}
+.name{font-weight:bold;color:#e87903;}
+.mymail{font-size:14px;font-weight:bold;color:#e87903;}
+
+
+/* 임시패스워드발급 */
+.password{width:700px;min-height:200px;margin:0 auto;padding:0 15px 40px 15px;background:url(../images/mail/bg_password.gif) no-repeat 420px top;}
+.password p{width:440px;margin:0 0 0 10px;padding:0;}
+
+
+/* 주문내역 */
+.cart_box{width:700px;margin:0;padding:0 15px 40px 15px;}
+.cart_info{width:700px;height:22px;border-bottom:3px solid #e7e7e7;}
+.cart_info li{display:inline;}
+.cart_info li img{margin:0 5px -4px 0;}
+.cart_info li.cart_num{margin:0 15px 0 0;font-weight:bold;color:#da3638;}
+.cart_info li.cart_date{font-weight:bold;}
+.s_info{display:block;width:700px;margin:10px 0 40px 0;}
+.cart_tit{width:700px;display:block;}
+.cart_tit span{float:right;font-weight:bold;margin:10px 0 0 0;text-decoration:underline;color:#e31736;}
+
+.bod_cart{width:700px;margin:14px 0 20px 0;}
+.bod_cart thead tr th{border-top:1px solid #8e8e8e;border-bottom:1px dotted #878787;padding:6px 0 6px 20px;text-align:left;}
+.bod_cart tbody tr th{border-bottom:1px solid #cdcdcd;background-color:#f3f3f3;padding:6px 0 6px 0;font-size:11px;color:#434343;}
+.bod_cart tbody tr td{text-align:center;padding:7px 0;border-bottom:1px solid #dfdfdf;}
+.bod_cart tbody tr td span.detail{background:url(../images/mail/s_arrow.gif) no-repeat left center;padding:0 0 0 10px;margin:0 0 0 20px;font-size:11px;color:#8a8a8a;font-weight:normal;}
+.bod_cart tbody tr td.pay{font-weight:bold;color:#e31736;}
+.bod_cart tbody tr td.info_name{font-weight:bold;text-align:left;padding-left:8px;}
+
+.total{width:665px;height:46px;margin: 20px auto 0 auto;padding:6px 20px 6px 6px;background:url(../images/mail/bg_total.gif) no-repeat center center;text-align:right;line-height:200%;font-weight:bold;}
+.total span{color:#fc791f;font-size:15px;}
+
+
+/* 일대일상담 */
+.counsel_box{width:700px;margin:0;padding:0 15px 40px 15px;}
+.counsel_box p{width:690px;margin:0 0 0 10px;padding:0;}
+.counsel_date{display:block;margin:0 0 30px 0;padding:0;width:690px;}
+.question{width:690px;margin:0 auto 20px auto;}
+.question thead tr th{text-align:left;margin:0;padding:0 0 10px 0;}
+.question tbody tr th{background-color:#f3f3f3;font-size:11px;padding:6px 10px;border-bottom:1px solid #cdcdcd;color:#434343;}
+.question tbody tr td{text-align:left;padding:6px 0 6px 5px;border-bottom:1px solid #cdcdcd;color:#434343;}
+.top_bod{border-top:2px solid #434343;}
+.c_name{font-weight:bold;color:#e87903;}
+
+.more{font-size:11px;color:#e87903;text-align:center;}
+.more span{font-weight:bold;}
+
+/* 푸터 */
+.mail_footer{display:block;width:700px;margin:0 auto;padding:10px 0;border-top:3px solid #959595;clear:both;}
+.mail_footer li{display:block;font-size:11px;color:#656565;padding:0 0 0 25px;background:url(../images/mail/info_point.gif) no-repeat 14px 8px;}
+.mail_footer li span{font-weight:bold;}

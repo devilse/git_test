@@ -1,0 +1,13 @@
+/* 파이어폭스 핵 */
+
+@-moz-document url-prefix() { .up_lnfo li span {margin:5px 0 6px 0;} }
+@-moz-document url-prefix() { .hot_lec li  span {margin:1px 0;} }
+@-moz-document url-prefix() { .hot_first {margin-bottom:2px; vertical-align:top;} }
+@-moz-document url-prefix() { .popular_register span {margin:5px 0 3px 0;} }
+@-moz-document url-prefix() { .star {margin-top:2px; margin-bottom:2px;} }
+
+/* IE9 핵*/
+:root .hot_lec li span {margin:4px 0 5px 0; \0/IE9;} 
+:root .star {margin-bottom:7px; margin-top:1px; \0/IE9;} 
+
+

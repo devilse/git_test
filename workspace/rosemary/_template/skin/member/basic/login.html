@@ -1,0 +1,45 @@
+<link rel="stylesheet" type="text/css" href="css/member.css"/>
+<link rel="stylesheet" type="text/css" href="css/hack.css"/>
+
+<!-- LS 우측 컨텐츠  영역 헤드 시작 -->
+<div class="sr_head">
+	<h3><img src="images/member/login_title.gif" alt="로그인" /></h3>
+	<p>{@ menu_location}{? menu_location.index_ > 0}<span> &gt; </span>{/}<span>{menu_location.value_}</span>{/}</p>
+</div>
+<!-- LS 우측 컨텐츠  헤드 끝 -->
+
+<!-- LS 우측 컨텐츠 로그인 시작 -->
+<div class="sr_body">
+
+	<!-- 로그인 시작 -->
+	<form method="post" action="../member/process/login.php">
+	<input type="hidden" name="return_uri" value="{return_uri}" />
+	<div class="login">
+		<dl>
+			<dt class="blind"><label for="uid">아이디</label></dt>
+			<dd><input type="text" name="id" class="text" maxlength="20" value="{save_id}" /></dd>
+			<dt class="blind"><label for="upwd">비밀번호</label></dt>
+			<dd><input type="password" name="pwd" class="text" maxlength="20" /></dd>
+		</dl>
+		<input type="image" src="images/member/btn_login.gif" alt="로그인" class="btn_login" />
+
+		<p class="login_btm">
+			<span class="btn_white"><a href="../member/idpw.php">아이디찾기</a></span>
+			<span class="btn_white"><a href="../member/idpw.php">비밀번호찾기</a></span>
+			<label><input type="checkbox" name="save_id" class="checkbox" value="Y"{? save_id != ""} checked="checekd"{/} /><img src="images/member/ch_id.gif" alt="아이디기억하기" /></label>
+		</p>
+
+		<p class="login_txt">
+			<span>아직 {siteinfo.si_site_name} 회원이 아니세요?<br />
+			회원으로 가입하시면 많은 혜택을 받으실 수 있습니다.</span>
+			<span class="btn_white02"><a href="../member/join.php">회원가입</a></span>
+		</p>
+	</div>
+	</form>
+	<!-- 로그인 끝 -->
+	<div class="left">
+		<img src="images/member/login_event.gif" alt="이벤트" />
+	</div>
+
+</div>
+<!-- LS 우측 컨텐츠 로그인 끝 -->

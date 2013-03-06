@@ -1,0 +1,3 @@
+<?php /* Template_ 2.2.7 2012/12/24 10:58:36 C:\rosemary\trunk\src\rosemary\_template\skin\ls\basic\list.html 000000450 */ 
+$TPL_menu_location_1=empty($TPL_VAR["menu_location"])||!is_array($TPL_VAR["menu_location"])?0:count($TPL_VAR["menu_location"]);?>
+<?php if($TPL_menu_location_1){$TPL_I1=-1;foreach($TPL_VAR["menu_location"] as $TPL_V1){$TPL_I1++;?><?php if($TPL_I1> 0){?><span> &gt; </span><?php }?><span><?php echo $TPL_V1?></span><?php }}?>

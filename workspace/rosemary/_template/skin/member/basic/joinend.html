@@ -1,0 +1,44 @@
+<script type="text/javascript" src="js/joinend.js"></script>
+<script type="text/javascript" src="js/emailcheck.js"></script>
+
+<link rel="stylesheet" type="text/css" href="css/member.css"/>
+<link rel="stylesheet" type="text/css" href="css/hack.css"/>
+
+<!-- LS 우측 컨텐츠  영역 헤드 시작 -->
+<div class="sr_head">
+	<h3><img src="images/member/join_title.gif" alt="회원가입" /></h3>
+	<p>{@ menu_location}{? menu_location.index_ > 0}<span> &gt; </span>{/}<span>{menu_location.value_}</span>{/}<span> &gt; </span><span>가입완료</span></p>
+</div>
+<!-- LS 우측 컨텐츠  헤드 끝 -->
+
+<!-- LS 우측 컨텐츠 회원가입 시작 -->
+<div class="sr_body">
+
+	<!-- 회원가입 시작 -->
+	<img src="images/member/join_tab04.gif" alt="가입완료" />
+	<div class="join">
+		<h3><img src="images/member/join_subtitle04.gif" alt="가입여부확인" /></h3>
+		<input type="hidden" name="mb_num" value="{mb_num}" />
+		<div class="join_end">
+			<p><font>이메일주소</font>
+				<input type="text" name="email1" id="email1" class="text" style="width:140px; ime-mode:disabled;" value="{email1}" />
+				<font>@</font>
+				<input type="text" name="email2" id="email2" class="text" style="width:140px; ime-mode:disabled;" value="{email2}" />
+				<select id="email_host" style="width:150px;">						
+					<option value="">직접입력</option>
+					<!--{@ email_host}-->
+					<option value="{email_host.value_}">{email_host.value_}</option>
+					<!--{/}-->																
+				</select>
+			</p>
+		</div>
+
+		<div class="join_btn02">
+			<span class="btn_rad02"><a href="javascript:sendemail()">인증메일발송</a></span>
+			<span class="btn_gray02"><a href="../main/index.php">메인으로 돌아가기</a></span>
+		</div>
+	</div>
+	<!-- 회원가입 끝 -->
+
+</div>
+<!-- LS 우측 컨텐츠 회원가입 끝 -->

@@ -1,0 +1,182 @@
+/****************************************************************************
+*		제작업체 : 주식회사 나눔커뮤니케이션즈
+*		제작일시 : 2012년 10월 31일
+*		연락처 : yumijin89@naver.com
+*		담당자 : 유미진
+*		기타사항 : 유지보수시 궁금한 사항이 있으면 이메일을 통해 문의 바랍니다.
+*****************************************************************************/
+@charset "utf-8";
+
+/* common */
+.common{float:left; margin-top:20px;}
+.com_tab{width:952px; height:40px; background:url(../images/search/com_tab.gif)no-repeat;}
+.com_tab ul{text-align:right; padding:8px 10px 0 0;}
+.com_tab li{display:inline; margin:0 14px;}
+.com_schtitle{margin-top:25px;}
+.com_schtitle img{vertical-align:middle; margin:-3px 3px 0 0;}
+.ca_01{margin-top:40px;}
+.ca_list01{width:100%; margin-top:10px; }
+.ca_list01 li{padding:10px; line-height:190%;}
+.ca_list01 li font{font-weight:bold;}
+.ca_list01 li img{vertical-align:middle; margin-top:-3px;}
+.ca_top{border-top:1px solid #dedede; padding-top:20px;}
+.com_sj{padding:0 13px;}
+.list_s{padding:0 18px;}
+.pay_btn{text-align:right; font-weight:bold; margin:-35px 20px 0 0;}
+.pay_btn span{margin-right:30px;}
+
+.bod_04{width:100%; font-size:11px; background-color:#f2f2f2; border-top:1px solid #d7d7d7; letter-spacing:0.07em; }
+.bod_04 th{height:70px; color:#151515; border-bottom:1px dotted #d7d7d7; text-align:left; text-indent:2em;}
+.bod_04 td{border-bottom:1px dotted #d7d7d7; color:#565656; font-size:12px;}
+.bod_04 td ul li{line-height:0;}
+.t_foot th{height:50px; background-color:#e7e7e7; border-top:1px solid #aba7a7; border-bottom:1px solid #aba7a7; font-size:12px; letter-spacing:0.01em;}
+.ft_pay{font-size:12px; color:#474747;}
+.ft_pay font{color:#803400;}
+.ft_pay02{text-align:right; padding-right:30px;}
+.th_list{margin-top:20px;  font-size:12px;}
+.th_list li{float:left; margin:0 30px 50px 30px;}
+.th_list h3{font-size:14px; margin:13px 0 5px 0;}
+.th_list h3 span{color:#e87903;}
+.th_list02{margin-top:20px;  font-size:11px;}
+.th_list02 li{float:left; margin:0 20px 50px 20px;}
+.th_list02 h3{font-size:13px; margin-top:11px;}
+.th_list02 h3 span{color:#e87903;}
+.th_name{width:50px; background-color:#939393; border:1px solid #7f7f7f; color:#fff;  padding:2px 3px; text-align:center;}
+.img_th{width:36px; height:37px; margin:10px 10px 10px 0; float:left; border:1px solid #d6d6d6;}
+.img_th02{width:71px; height:82px; margin:10px 10px 10px 0; float:left; border:1px solid #d6d6d6;}
+.th_btn{clear:both;}
+.key_list{line-height:180%; margin-top:15px;}
+.key_list li{text-indent:0.5em;}
+.key_list span{color:#e87903;}
+.key_list font{color:#59a10e;}
+
+
+/* style */
+.ft_org{color:#e87903;}
+.blt{color:#d00322; font-size:11px;}
+
+.re_bod{width:100%; font-size:12px; margin-top:30px; border-top:2px solid #434343; color:#434343; text-align:center;}
+.re_bod th{font-size:12px; background-color:#f3f3f3; height:30px; border-bottom:1px solid #d7d7d7;}
+.re_bod td{height:75px; line-height:170%; font-weight:bold; border-bottom:1px solid #d7d7d7;}
+.re_bod .checkbox{margin:9px 0 0 0;}
+.re_bod02{width:100%; background-color:#f3f3f3; border-bottom:0;}
+.re_bod02 th{font-size:12px; border:0; text-align:left; text-indent:2em;}
+.re_bod02 td{font-size:12px; font-weight:normal; border:0; padding:10px 0; height:20px;}
+.re_bod02 .checkbox{margin:0;}
+.re_th{vertical-align:top; padding-top:10px;}
+.re_th02{vertical-align:top; padding-top:27px;}
+.b_top th{border-top:1px dotted #c7c7c7;}
+.b_top td{border-top:1px dotted #c7c7c7;}
+.re_foot{background-color:#e7e7e7;}
+.b_n td{border-bottom:0;}
+.re_foot td{border-top:1px solid #aba7a7; border-bottom:1px solid #aba7a7; font-weight:bold;}
+.re_foot span{color:#a40019;}
+
+.re_pay{background:url(../images/register/pay_bg.gif) no-repeat; width:950px; height:58px; margin:0 auto; margin-top:20px; text-align:right;}
+.re_pay p{padding:4px 20px 0 0; font-weight:bold; color:#353535; line-height:220%;}
+.re_pay span{font-size:12px; color:#e87903;}
+.re_pay_btn{text-align:center; margin:20px 0;}
+
+/* style */
+.t_ind{text-indent:1.3em;}
+.t_left{text-align:left;}
+.t_right02{text-align:right;}
+.t_line{text-decoration:line-through;}
+.ft_red{color:#d8271c;}
+.ft_brown{color:#d43c00;}
+.m_left{margin-left:9px;}
+.ft_style02{color:#8d8d8d; font-size:0.9em; font-weight:normal;}
+
+
+/* white_btn */
+.white_btn02 {
+color: #555; font-size:11px; font-family:gulim,"굴림"; padding:4px 13px; border: solid 1px #b7b7b7; 
+background: #fff; 
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ededed)); 
+background: -moz-linear-gradient(top,  #fff,  #ededed);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#ededed');
+}
+.white_btn02:hover {
+cursor: pointer;
+background: #ededed;
+background: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#dcdcdc));
+background: -moz-linear-gradient(top,  #fff,  #dcdcdc);
+filter:  progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#dcdcdc');
+}
+
+/* brown_btn */
+.brown_btn02{
+color:#fff; font-size:12px; padding:9px 26px 6px 26px; border:1px solid #9e5d00; margin:0 2px 0 15px;
+background: #da700d;
+background: -webkit-gradient(linear, left top, left bottom, from(#d48719), to(#ad6b0c));
+background: -moz-linear-gradient(top,  #d48719,  #ad6b0c);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#da700d', endColorstr='#b55801'); 
+}
+.brown_btn02:hover{
+cursor: pointer;
+background: #da700d;
+background: -webkit-gradient(linear, left top, left bottom, from(#d48719), to(#8a5101));
+background: -moz-linear-gradient(top,  #d48719,  #8a5101);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#da700d', endColorstr='#9b4a00'); 
+}
+
+.brown_btn03{
+color:#fff; font-size:12px; padding:11px 26px 9px 26px; border:1px solid #9e5d00; font-weight:bold; margin:0 3px;
+background: #da700d;
+background: -webkit-gradient(linear, left top, left bottom, from(#d48719), to(#ad6b0c));
+background: -moz-linear-gradient(top,  #d48719,  #ad6b0c);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#da700d', endColorstr='#b55801'); 
+}
+.brown_btn03:hover{
+cursor: pointer;
+background: #da700d;
+background: -webkit-gradient(linear, left top, left bottom, from(#d48719), to(#8a5101));
+background: -moz-linear-gradient(top,  #d48719,  #8a5101);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#da700d', endColorstr='#9b4a00'); 
+}
+
+/* gray_btn */
+.gray_btn{
+color:#fff; font-size:12px; padding:9px 26px 6px 26px; border:1px solid #7d7d7d;  margin-right:20px;
+background: #969696;
+background: -webkit-gradient(linear, left top, left bottom, from(#d48719), to(#ad6b0c));
+background: -moz-linear-gradient(top,  #d48719,  #ad6b0c);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#969696', endColorstr='#585858'); 
+}
+.gray_btn:hover{
+cursor: pointer;
+background: #969696;
+background: -webkit-gradient(linear, left top, left bottom, from(#d48719), to(#8a5101));
+background: -moz-linear-gradient(top,  #d48719,  #8a5101);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#969696', endColorstr='#424242'); 
+}
+.gray_btn02{
+color:#fff; font-size:12px; padding:11px 26px 9px 26px; border:1px solid #7d7d7d; margin:0 3px;
+background: #969696;
+background: -webkit-gradient(linear, left top, left bottom, from(#d48719), to(#ad6b0c));
+background: -moz-linear-gradient(top,  #d48719,  #ad6b0c);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#969696', endColorstr='#585858'); 
+}
+.gray_btn02:hover{
+cursor: pointer;
+background: #969696;
+background: -webkit-gradient(linear, left top, left bottom, from(#d48719), to(#8a5101));
+background: -moz-linear-gradient(top,  #d48719,  #8a5101);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#969696', endColorstr='#424242'); 
+}
+
+/* red_btn */
+.red_btn02{
+color:#fff; font-size:12px; padding:11px 26px 9px 26px; border:1px solid #990017; font-weight:bold; margin:0 3px;
+background: #c50623;
+background: -webkit-gradient(linear, left top, left bottom, from(#e32f2f), to(#d20808));
+background: -moz-linear-gradient(top,  #e32f2f,  #d20808);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c50623', endColorstr='#950016'); 
+}
+.red_btn02:hover{
+cursor:pointer;
+background: #c50623;
+background: -webkit-gradient(linear, left top, left bottom, from(#e32f2f), to(#a50101));
+background: -moz-linear-gradient(top,  #e32f2f,  #a50101);
+filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c50623', endColorstr='#7b0013'); 
+}

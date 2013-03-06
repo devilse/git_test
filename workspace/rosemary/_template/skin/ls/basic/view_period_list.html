@@ -1,0 +1,49 @@
+
+					<table cellspacing="0" cellpadding="0" border="0" summary="board" class="recon_bod02">
+						<caption></caption>
+						<colgroup>
+							<col width="23%" />
+							<col width="10%" />
+							<col width="47%" />
+							<col width="20%" />
+						</colgroup>
+						<thead>
+							<tr>
+								<th colspan="2">강좌명</th>
+								<th>강의명</th>
+								<th>강의시간</th>
+							</tr>
+						</thead>
+						<tbody>
+
+
+
+
+
+	{@lt_subject_loop}
+		{?.period_nums > 0}
+			{@period} 
+		
+			
+							<tr>
+								{?period.number == "1"}<td rowspan="{.period_nums}">{.lts_name}</td>{/}
+						
+								<td class="ft_co">{period.number}강</td>
+								<td>{period.ltsp_name}</td>
+								<td class="ft_co02">{period.ltsp_time_length}</td>
+							</tr>
+				{/}
+			{:}
+							<tr>
+								<td colspan="4" class="ft_co">등록된 강의가 업습니다.</td>
+							</tr>
+			{/}
+		
+	{/}
+
+
+
+
+
+						</tbody>
+					</table>

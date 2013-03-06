@@ -1,0 +1,85 @@
+<?php /* Template_ 2.2.7 2013/01/14 16:52:13 C:\rosemary\trunk\src\rosemary\_template\skin\member\basic\changepwd.html 000003162 */ 
+$TPL_menu_location_1=empty($TPL_VAR["menu_location"])||!is_array($TPL_VAR["menu_location"])?0:count($TPL_VAR["menu_location"]);?>
+<link rel="stylesheet" type="text/css" href="/_template/skin/member/basic/css/mypage.css"/>
+<script type="text/javascript">
+function modi_pwd()
+{
+var f = document.pwd_form;
+if (!f.y_pwd.value) {
+alert("현재 비밀번호를 입력해 주세요.");
+f.y_pwd.focus();
+return;
+} else if (!f.pwd1.value) {
+alert("변경할 비밀번호를 입력해 주세요.");
+f.pwd1.focus();
+return;
+} else if (!f.pwd2.value) {
+alert("확인할 비밀번호를 입력해 주세요.");
+f.pwd2.focus();
+return;
+} else if (f.pwd1.value != f.pwd2.value) {
+alert("비밀번호가 일치하지 않습니다.");
+f.pwd2.focus();
+return;
+} else {
+$.ajax({
+type : "POST"
+, async : true
+, url : "../../_process/my_page/pwd_modi.php"
+, dataType : "html"
+, timeout : 30000
+, cache : false
+, data : $("#pwd_form").serialize()
+, contentType: "application/x-www-form-urlencoded; charset=UTF-8"
+, error : function(request, status, error) {
+alert("ajax 통신서버에 접속할 수 업습니다.");
+}
+, success : function(response, status, request) {
+alert(response);
+}
+})
+}
+}
+</script>
+<!-- LS 우측 컨텐츠  영역 시작 -->
+<div class="s_r_area03">
+<!-- LS 우측 컨텐츠  영역 헤드 시작 -->
+<div class="sr_head03">
+<h3><img src="/_template/skin/member/basic/images/mypage/password_title.gif" alt="비밀번호변경" /></h3>
+<p><?php if($TPL_menu_location_1){$TPL_I1=-1;foreach($TPL_VAR["menu_location"] as $TPL_V1){$TPL_I1++;?><?php if($TPL_I1> 0){?><span> &gt; </span><?php }?><span><?php echo $TPL_V1?></span><?php }}?></p>
+</div>
+<!-- LS 우측 컨텐츠  헤드 끝 -->
+<!-- LS 우측 컨텐츠 로그인 시작 -->
+<div class="sr_body03">
+<form name="pwd_form" id="pwd_form">
+<!-- 비밀번호변경 시작 -->
+<div class="password">
+<ul class="idpw02">
+<li>
+<span>현재 비밀번호</span>
+<input type="password" name="y_pwd" class="my_text02" maxlength="20" style="width:200px;" />
+</li>
+<li>
+<span>새로운 비밀번호</span>
+<input type="password" name="pwd1" class="my_text02" maxlength="20" style="width:200px;" />&nbsp;
+<b class="my_red">사용가능한 비밀번호입니다.</b>
+</li>
+<li>
+<span>비밀번호 확인</span>
+<input type="password" name="pwd2" class="my_text02" maxlength="20" style="width:200px;" />&nbsp;
+<font>비밀 번호를 한번 더 입력해 주세요.</font>
+</li>
+</ul>
+<p class="guide">
+· 쉬운 비밀번호나 자주 사용하는 비밀번호는 주기적으로 변경하는 것이 좋습니다.<br />
+· 다른사람이 쉽게 알아낼 수 있는 비밀번호는 개인정보 유출의 위험이 높으므로 사용을 자제하여 주시기 바랍니다.
+</p>
+</div>
+<div class="pop_btn">
+<input onclick="modi_pwd()" class="red_btn03" type="button" value="비밀번호 변경" />
+</div>
+<!-- 비밀번호변경 끝 -->
+</form>
+</div>
+<!-- LS 우측 컨텐츠 로그인 끝 -->
+</div>

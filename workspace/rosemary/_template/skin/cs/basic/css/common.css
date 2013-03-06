@@ -1,0 +1,12 @@
+/* 공통 부분 */
+
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,img{margin:0;padding:0}  
+body,input,textarea,select,button,table{font-family:'돋움',Dotum,AppleGothic,sans-serif;font-size:12px;}
+ul,dl,li,ol,dd,dt {list-style:none}
+img,fieldset {border:0px; margin:0; padding:0}
+a{text-decoration:none;}
+a:hover,a:active,a:focus{text-decoration:none}  
+address{font-style:normal; color:#858585}
+input{color:#333; border:0; outline:none}
+textarea{scrollbar-arrow-color:#900326}
+.blind,legend{display:block;overflow:hidden;position:absolute;top:-1000em;left:0}

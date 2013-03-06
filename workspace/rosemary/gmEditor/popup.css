@@ -1,0 +1,21 @@
+/****************************************************************************
+*		제작업체 : 주식회사 나눔커뮤니케이션즈
+*		제작일시 : 2012년 11월 29일
+*		연락처 : yumijin89@naver.com
+*		담당자 : 유미진
+*		기타사항 : 유지보수시 궁금한 사항이 있으면 이메일을 통해 문의 바랍니다.
+*****************************************************************************/
+@charset "utf-8";
+
+*{font-family:'굴림', gulim; font-size:0.94em; margin:0; padding:0;}
+img{border:0;}
+
+/* 팝업 */
+.b_pop{width:360px;}
+.b_top{background:url(images/popup/top_del.gif) no-repeat; height:63px;}
+.b_btm{background:url(images/popup/btm.gif) no-repeat; height:59px;}
+.b_bg{background:url(images/popup/bg.gif) repeat-y; text-align:center; padding:20px 0; color:#808080; font-weight:bold;}
+.b_bg span{color:#e11534;}
+.b_bg p{font-weight:normal;}
+.b_btn{margin:15px 0 0 0;}
+.b_btn img{margin: 0 5px;}

@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>라이패스</title>
+<meta name="author" content="nanumcommunications"/>
+<meta name="robots" content="all"/>
+<meta name="keywords" content="nanumcommunications, 나눔커뮤니케이션즈, 자격증, license, Lipass, 국가기술자격증, 학점인정, 학위취득, 공무원, 국가기술, 유망자격증, 교수, 강좌, 기능사, 기사, 산업기사"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="css/player.css"/>
+<script type="text/javascript" src="../../../../_js/cufon-yui.js"></script>
+<script type="text/javascript" src="../../../../_js/NanumGothic_400-NanumGothic_Bold_400.font.js"></script>
+    <script type="text/javascript">
+        var m_nowseq = "0";
+        var imageRoot = "images/";
+    </script>
+
+
+<script type="text/javascript" src="../../../../_js/jquery.min.js"></script>
+<script type="text/javascript" src="../../../../_js/player.js"></script>
+
+<script type="text/javascript">
+	Cufon.replace('.area_movie>h1');
+	function change_lts(num)
+	{
+		var f = document.player_form;
+		f.lts_num.value = num;
+		f.action = "?";
+		f.submit();
+	}
+</script>
+
+    <script type="text/javascript">        
+        document.onmousemove = moveobj;
+        document.onmouseup = freeobj;
+        function moveobj()
+        {
+	        if(objid == "volb")
+	        {
+
+		        if (event.clientX - x >= 0 && event.clientX - x <= 60)
+		        {                
+			        document.all[objid].style.posLeft=event.clientX - x;
+                    $("#volb_back").width(event.clientX - x + 7);
+			        doSetVolume(Math.round(document.all[objid].style.posLeft));
+		        }
+
+	        }
+	        else if(objid =="timeb"){
+		        // 타임바는 드래그하지 않습니다.
+	        }
+
+	        return false;
+        }
+
+
+        $(document).mousedown(function(event){
+            if(event.clientX > 272 && event.clientX < 504)
+	        {
+		        if(event.clientY > 592 && event.clientY <= 612)
+		        {                    
+			        // 타임바를 정확하게 클릭했습니다.
+			        if(event.clientX - 292 < 0)
+			        {
+				        document.all["timeb"].style.posLeft = 0;
+                        $("#timeb_back").width(0);
+			        }
+			        else
+			        {
+				        if(event.clientX - 292 > 212)
+				        {
+					        document.all["timeb"].style.posLeft = 212;
+                            $("#timeb_back").width(212);
+				        }
+				        else
+				        {
+					        document.all["timeb"].style.posLeft = event.clientX - 282;
+                            $("#timeb_back").width(event.clientX - 282);
+				        }
+			        }
+
+			        doSetPosition(Math.round(document.all["timeb"].style.posLeft));
+		        }
+	        }
+
+	        //return false;
+        });
+
+        // 진행바 옮김
+        function posmove(){
+
+	        //document.title = MediaPlayer1.PlayState;
+
+	        printState();
+            //window.status = MediaPlayer1.settings.Volume;
+
+	        if(MediaPlayer1.PlayState == 0 || document.MediaPlayer1.controls.currentPosition == 0)
+	        {
+		        document.all.timeb.style.posLeft = 0;
+                $("#timeb_back").width(0);
+	        }
+	        else
+	        {
+		        document.all.timeb.style.posLeft = Math.round(212 * document.MediaPlayer1.controls.currentPosition / document.MediaPlayer1.currentMedia.Duration);
+                $("#timeb_back").width(Math.round(212 * document.MediaPlayer1.controls.currentPosition / document.MediaPlayer1.currentMedia.Duration));
+	        }
+        }
+        // 진행바 옮김 끝
+    </script>
+    <SCRIPT FOR="MediaPlayer1" EVENT="Buffering(bStart)" LANGUAGE="JavaScript">
+
+			    buffer_mode = bStart;
+
+     //-->
+    </SCRIPT>
+
+    <SCRIPT event="playStateChange(NewState)" for="MediaPlayer1" language=JScript>
+	    if (!buffer_mode) {
+			    state_bar.value =  MediaPlayer1.status;
+	    }
+
+	    if (NewState == 8) {
+            $("#currentTime").text(time_paser(MediaPlayer1.controls.CurrentPosition));
+		    buttononoff(3);
+	    } else {
+		    changePlayState(NewState);
+	    }
+    </SCRIPT>
+
+    <script language="vbscript">
+    sub doSetVolume(lVolume)
+	    Percent = (lVolume)/(60)
+
+
+	    XXX = (100 * Percent)
+	    MediaPlayer1.settings.Volume = XXX
+        //window.status = XXX
+    End Sub
+
+    sub doSetPosition(lPosition)
+	    //window.status = lPosition
+	    barpos = lPosition
+
+	    barlen = 212
+
+	    MediaPlayer1.controls.currentPosition = MediaPlayer1.currentMedia.Duration * ((barpos) / barlen)
+	    MediaPlayer1.controls.Play()
+    End Sub
+    </script>
+
+</head>
+
+<body>
+<!--mms://media.pyeonib.com/PYEONIB/edustory/nie/3.WMV-->
+<form name="player_form">
+	<input type="hidden" name="lt_num" value="{lt_num}">
+	<input type="hidden" name="os_num" value="{os_num}">
+	<input type="hidden" name="g_num" value="{g_num}">
+	<input type="hidden" name="lts_num">
+</form>
+
+	<div id="bg_player">
+		<!-- 동영상 플레이어 영역 시작 -->
+		<div class="area_movie">
+			<h1>제1강 유체역학 유체일반</h1>
+			<div class="play_movie">
+        <object id="MediaPlayer1" classid="CLSID:6BF52A52-394A-11D3-B153-00C04F79FAA6" width="805" height="450">
+            <param name="URL" value="{ltsp_url}" />
+            <param name="fileName" value="{ltsp_name}" />
+            <param name="SRC" value="{ltsp_url}" />
+            <param name="autoStart" value="true" />    
+            <param name="enableContextMenu" value="false" />        
+            <param name="ShowControls" value="false" />    
+            <param name="AutoSize" value="true" />
+            <param name="ShowDisplay" value="false" />
+            <param name="uiMode" value="none" />
+            <param name="volume" value="100" />
+        </object>	 
+
+
+
+
+			</div>
+			<div class="play_bar">
+				<p class="btn_prev" id="btn_g"><span class="blind">이전</span></p>
+				<p class="btn_play" id="btn_play"><span class="blind" >재생</span></p>
+				<p class="btn_stop"  id="btn_stop"><span class="blind">멈춤</span></p>
+				<p class="btn_next" id="btn_f"><span class="blind">다음</span></p>
+				<span class="play_info">재생중</span>
+				<div class="progress">
+					<span class="time" id="currentTime">00:00</span>
+					<p class="pro_pointer"><img src="images/player/pointer.png" alt="컨트롤러" /></p>
+					<div class="bg_progress_on"></div>
+					<div class="bg_progress"></div>
+					<span class="time_e">25:40</span>
+				</div>
+				<div class="volume">
+					<p class="vol_pointer"><img src="images/player/pointer.png" alt="컨트롤러" /></p>
+					<div class="bg_vol_on"></div>
+					<div class="bg_vol"></div>
+				</div>
+				<img class="full_s" src="images/player/btn_full.gif" alt="전체화면" onclick="resizeFull()" />
+			</div>
+		</div>
+		<!-- 동영상 플레이어 영역 끝 -->
+
+		<!-- 강의리스트 시작 -->
+		<div class="area_list">
+			<span class="area_tit">강의목차</span>
+			<select class="lec_multi" onchange="change_lts(this.value)">
+				{@subject_list}
+				<option value="{.lts_num}" {?.lts_num == lts_num}selected{/}>{.lts_name}</option>
+				{/}
+			</select>
+			<div class="list_box">
+				<table class="bod_list" cellpadding="0" cellspacing="0" border="0" summary="강의목차">
+					<caption></caption>
+					<colgroup>
+						<col width="15%" />
+						<col width="40%" />
+						<col width="20%" />
+						<col width="25%" />
+					</colgroup>
+					<tr>
+						<th>회차</th>
+						<th>차시명</th>
+						<th>진도율</th>
+						<th>강의보기</th>
+					</tr>
+{?period_nums > 0}
+	{@period_list}
+					<tr>
+						<td>{.number}강</td>
+						<td class="lec_tit"><a href="./goods_show.php?lt_num={lt_num}&os_num={os_num}&g_num={g_num}&ltsp_num={.ltsp_num}">{.ltsp_name}</a></td>
+						<td>50%</td>
+						<td><img src="images/player/btn_lec_view.gif" alt="강의보기" /></td>
+					</tr>
+	{/}
+{:}
+					<tr>
+						<td colspan="4">등록된 강의가 존재 하지 않습니다.</td>
+					</tr>
+{/}
+
+
+				</table>
+			</div>
+		</div>
+		<!-- 강의리스트 끝 -->
+	</div>
+
+<input type="hidden" name="state_bar" class="state_bar" />
+<div style="position:absolute; left:338px; top:547px; width:232px; height:8px; z-index:12;">    
+    <div id="timeb_back" style="position:absolute; top:6px; background-image:url(images/player/bg_progress_on.gif); background-repeat:no-repeat; width:0px; height:8px;"></div>    
+    <img src="images/player/pointer.png" width="20" height="20" id="timeb" style="position:absolute; z-index:1;margin:0 0 0 -2px;" onMouseDown="setVolume(this)" alt="" />
+</div>
+<div style="position:absolute; left:738px; top:550px; width:74px; height:8px; z-index:11;">
+    <div id="volb_back" style="position:absolute; top:3px; background-image:url(images/player/bg_progress_on.gif); background-repeat:no-repeat; width:67px; height:8px;"></div>    
+    <img src="images/player/pointer.png" width="14" height="14" id="volb" style="position:absolute; z-index:2; left:60px" onMouseDown="setVolume(this)" alt="" /> 
+</div>
+
+</body>
+</html>

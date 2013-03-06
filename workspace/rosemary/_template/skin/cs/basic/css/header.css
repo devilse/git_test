@@ -1,0 +1,55 @@
+
+
+/* 탑 메뉴*/
+.tnb {width:950px; height:33px; margin:0 auto}
+.tnbtab a{height:31px; overflow:hidden; display:block; float:left; margin-top:2px}
+.tnbtab a:hover img{margin-top:-31px}
+.now{margin-top:-31px}
+.tnb p{float:right; margin:7px 0 0 0; color:#939393}
+.tnb p.bef_log{float:right; margin:10px 0 0 0; color:#939393}
+.tnb p a{color:#939393; font-size:11px; margin:0}
+
+/* 글로벌 로고 영역*/
+.gnb {width:950px; margin:0 auto}
+.gtop h1{width:173px; height:69px; float:left}
+.gtop h2{width:600px; height:38px; float:left; text-align:center;}
+.gtop p{width:177px; float:right; margin-top:41px}
+.gtop p img{margin-left:13px;float:right}
+
+/* 글로벌 검색 영역*/
+.gsearch{width:950px; height:80px; float:left;}
+.gsearch dl{width:515px; height:80px; margin: 0 0 0 180px; float:left;}
+.gsearch label{color:#fff;margin-right:7px; vertical-align:2px}
+.gsearch dt{width:115px; height:48px; margin:19px 0 0 21px; float:left}
+.gsearchbox {width:300px; height:34px; background:url(../images/searbg.gif) no-repeat; margin:12px 0 0 5px; padding-left:5px; line-height:220%; font-size:12px; float:left; border:0;}
+.gsearchbtn {width:66px; height:34px; background:url(../images/searbtn.gif) no-repeat; margin-top:12px; cursor:pointer; font-size:0; display:block;}
+.gsearchbtn:hover {background:url(../images/sear_btn_hover.gif) no-repeat}
+.gsearchbtn:active {background:url(../images/sear_btn_active.gif) no-repeat}
+.radio1 {margin:10px 2px 0 4px}
+.gsearch ul{width:148px; height:80px; float:right; display:block;}
+.gsearch li a{height:80px; overflow:hidden; display:block; float:right;}
+.gsearch li a:hover img{margin-top:-80px}
+.sear_txt{float:left;margin: 5px 0 0 8px; color:#fff; font-size:11px; padding: 3px 0 0 25px; background: url(../images/ico_search.gif) no-repeat}
+.sear_txt a{color:#fff;}
+.sear_txt a:hover{color:#fff; text-decoration:none;}
+.sear_txt span{color:#ed7487; margin: 0 5px;}
+
+/* 글로벌 하단 영역*/
+.gcategory{width:950px; height:43px; float: left; text-align: center;padding: 0;}
+.gcategory li{display: inline-block; margin:14px 50px 0 50px;}
+.gcategory li.gcateA{margin-left:0;}
+.gcategory li.gcateB{margin-right:0;}
+
+.btn_my{margin: 0 10px -5px 0;}
+
+/* 전체메뉴 오버시 */
+#gm_box{width:100%;background:#fff;border-bottom:1px solid #eaeaea;position:absolute;z-index:100;margin:225px 0 0 0;padding:0;text-align:center;}
+.gm_list{width:948px;height:440px;margin:10px auto 0 auto;padding:0;overflow-y:scroll;}
+.gm_list dl{display:block;width:146px;margin:0 3px 10px 3px;padding:0;border:1px dotted #ededed;border-top:none;float:left;}
+.gm_list dl dt{width:126px;background-color:#f1f1f1;margin:0 0 10px 0;padding:8px 10px;text-align:left;font-weight:bold;color:#454545;}
+.gm_list dl dd{width:126px;margin:0;padding:8px 10px;text-align:left;font-size:11px;color:#858585;}
+
+.btn_close{margin:10px 0 0 0;}
+
+
+.left_gm_box{width:786px;height:186px;background:url(../images/bg_all_b.png) no-repeat;position:absolute;z-index:99;margin:19px 0 0 151px;padding:10px;}

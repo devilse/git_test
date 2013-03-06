@@ -1,0 +1,64 @@
+/****************************************************************************
+*		제작업체 : 주식회사 나눔커뮤니케이션즈
+*		제작일시 : 2013년 1월 8일
+*		담당자 : 박은지
+*		기타사항 : 유지보수시 궁금한 사항이 있으면 이메일을 통해 문의 바랍니다.
+*****************************************************************************/
+@charset "utf-8";
+
+body{margin:0;padding:0;font-family:Dotum,'돋움',Gulim,'굴림',sanserif;font-size:11px;
+scrollbar-face-color:#494950;
+scrollbar-highlight-color:#58585f;
+scrollbar-3dlight-color:#58585f;
+scrollbar-darkshadow-color:#58585f;
+scrollbar-shadow-color:#58585f;
+scrollbar-arrow-color:#58585f;
+scrollbar-track-color:#58585f;
+}
+
+
+#bg_player{width:1274px;height:648px;background:url(../images/player/bg_player.jpg) no-repeat;margin:0;padding:0;}
+.area_movie{width:901px;height:605px;float:left;}
+.area_movie h1{width:901px;height:37px;text-align:center;color:#fff;font-size:17px;font-weight:bold;margin:0;padding-top:18px;}
+.play_movie{width:800px;height:450px;border:5px solid #000;margin:0 auto;}
+
+.play_bar{width:861px;height:72px;padding:18px 0 0 42px;}
+/* 플레이버튼 */
+.btn_prev{width:38px;height:38px;overflow:hidden;background:url(../images/player/btn_prev.png) no-repeat top center;float:left;display:block;margin:5px 3px 0 0;cursor:pointer;}
+.btn_play{width:46px;height:46px;overflow:hidden;background:url(../images/player/btn_play.png) no-repeat top center;float:left;display:block;margin:0 3px 0 0;cursor:pointer;}
+.btn_stop{width:46px;height:46px;overflow:hidden;background:url(../images/player/btn_stop.png) no-repeat top center;float:left;display:block;margin:0 3px 0 0;cursor:pointer;}
+.btn_next{width:38px;height:38px;overflow:hidden;background:url(../images/player/btn_next.png) no-repeat top center;float:left;display:block;margin:5px 10px 0 0;cursor:pointer;}
+.btn_prev:hover,.btn_play:hover,.btn_stop:hover,.btn_next:hover{background-position:bottom center;}
+.blind{display:block;margin-top:1000px;}
+
+/* 재생정보 */
+.play_info{display:block;width:64px;height:15px;background-color:#232323;border:1px solid #373737;font-size:11px;color:#ff8b45;text-align:center;float:left;padding-top:5px;margin:15px 10px 0 0;letter-spacing:-0.01em;}
+
+/* 상태바 */
+.progress{width:404px;height:16px;margin:20px 10px 0 0;float:left;}
+.progress .time{display:block; width:28px;float:left;margin:0;padding:0;color:#fff;position:absolute;}
+.progress .time_e{display:block; width:28px;float:left;margin:0 0 0 372px;padding:0;color:#fff;position:absolute;}
+.progress .bg_progress{width:331px;height:9px;background:url(../images/player/bg_progress.gif) no-repeat center center;float:left;margin:0 6px 0 34px;position:absolute;z-index:1;}
+.progress .bg_progress_on{width:331px;height:9px;background:url(../images/player/bg_progress_on.gif) no-repeat center center;float:left;margin:0 6px 0 34px;position:absolute;z-index:2;}
+.pro_pointer{width:19px;height:19px;display:block;position:absolute;z-index:3;margin:-5px 0 0 30px;padding:0;float:left;}
+
+/* 볼륨 */
+.volume{width:100px;height:16px;background:url(../images/player/ico_vol.gif) no-repeat left top;float:left;margin:18px 10px 0 0;}
+.bg_vol{width:78px;height:9px;background:url(../images/player/bg_vol.gif) no-repeat center center;float:left;margin:2px 0 0 20px;position:absolute;z-index:1;}
+.bg_vol_on{width:78px;height:9px;background:url(../images/player/bg_vol_on.gif) no-repeat center center;float:left;margin:2px 0 0 20px;position:absolute;z-index:2;}
+.vol_pointer{width:19px;height:19px;display:block;position:absolute;z-index:3;margin:-3px 0 0 30px;padding:0;float:left;}
+
+.full_s{margin:12px 0 0 0;}
+
+
+/* 재생목록 */
+.area_list{width:331px;height:565px;float:right;margin:0;padding:20px;}
+.area_tit{display:block;width:135px;height:23px;background-color:#58585f;border:1px solid #2d2d32;border-bottom:none;font-size:12px;font-weight:bold;color:#bdbdbd;text-align:center;padding:12px 0 0 0;position:absolute;z-index:2;}
+.list_box{width:311px;height:510px;background-color:#58585f;border:1px solid #2d2d32;position:absolute;z-index:1;margin:35px 0 0 0;padding:10px;overflow-y:scroll;}
+.lec_multi{width:160px;float:right;border:1px solid #fff;margin:2px 0 0 0;font-size:12px;}
+
+.bod_list{width:100%;}
+.bod_list tr th{height:35px;background-color:#2b2b2f;font-weight:bold;font-size:11px;color:#fff;text-align:center}
+.bod_list tr td{height:35px;font-size:11px;color:#fff;text-align:center}
+.bod_list tr td.lec_tit{text-align:left;font-weight:bold;color:#ff8a44;padding:0 3px;}
+.bod_list tr td.lec_tit a{color:#ff8a44;}

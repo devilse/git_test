@@ -1,0 +1,70 @@
+
+<script language="javascript">
+<!--
+	function PathUrl(){
+		document.add_form.url.value = opener.document.getElementById("ReturnUrl").value;
+	}
+
+function imgview(){
+	var size1,size2;
+	var type = '2';
+	var tmp = new Image();
+	var key = document.getElementById('upfile').value;
+	var imgObj = document.images;
+	if(type==1) return false;
+	tmp.src = key;
+	size1 = tmp.offsetWidth;
+	size2 = tmp.height;
+	size1 = (150>=size1) ? size1 : 150;
+	size2 = (150>=size2) ? size2 : 150;
+/*
+	imgObj.Pickimg.style.display = "";
+	imgObj.Pickimg.src = key;
+	imgObj.Pickimg.width = size1;
+	imgObj.Pickimg.height = size2;
+
+	if(tmp.width>600) {
+		document.getElementById('imgsize').value = tmp.width;
+	} else if(tmp.width!=0){
+		document.getElementById('imgsize').value = tmp.width;
+	} else {
+		document.getElementById('imgsize').value = tmp.width;
+	}
+	*/
+}
+
+function send_img(){
+document.add_form.submit();
+}
+
+//-->
+</script>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>라이패스LS</title>
+<meta name="author" content="nanumcommunications"/>
+<meta name="robots" content="all"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<link rel="stylesheet" type="text/css" href="popup.css"/>
+</head>
+
+<body>
+	<form name="add_form" action="upfile_ok.php" method="post" enctype='multipart/form-data'>
+	<input type="hidden" name="url">
+	<input type="hidden" name="type" value="<?=$_GET['op']?>">
+	<div class="b_pop">
+		<div><img src="images/popup/top_upload.gif" alt="" /></div>
+		<div class="b_bg">
+			<form name="add_form" action="upfile_ok.php" method="post" enctype='multipart/form-data'>
+			<input type="hidden" name="url">
+			<input type="hidden" name="type" value="<?=$_GET['op']?>">
+			<input type="file" name="upfile" style="display:block;background:#fff;border:1px solid #eaeaea;height:24px;width:260px;margin:0 auto;" align="absmiddle" onchange="imgview();" size="18">
+			<div class="b_btn"><a href="javascript:send_img()"><img src="images/popup/btn_ok.gif" alt="확인"/></a><a href="javascript:send.close();"><img src="images/popup/btn_cancel.gif" alt="확인"/></a></div>
+		</div>
+		<div class="b_btm"></div>
+	</div>
+</form>
+</body>
+</html>

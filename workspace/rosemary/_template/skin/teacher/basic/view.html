@@ -1,0 +1,60 @@
+<link rel="stylesheet" type="text/css" href="css/professor.css"/>
+<script type = "text/javascript">
+	function send_list(page,ca_num)
+	{
+		document.location.href="./index.php?page="+page+"&ca_num="+ca_num;
+	}
+</script>
+
+
+	<!-- LS 우측 컨텐츠  영역 시작 -->
+		<div class="s_r_area04">
+
+			<!-- LS 우측 컨텐츠  영역 헤드 시작 -->
+			<div class="sr_head04">
+				<h3><img src="images/professor/professor_title.gif" alt="교수소개" /></h3>
+				<p>{@ menu_location}{? menu_location.index_ > 0}<span> &gt; </span>{/}<span>{menu_location.value_}</span>{/}</p>
+			</div>
+			<!-- LS 우측 컨텐츠  헤드 끝 -->
+
+			<!-- LS 우측 컨텐츠 로그인 시작 -->
+			<!-- 교수소개 시작 -->
+			<div class="professor">
+
+					<img src="images/professor/professor_img.gif" alt="교수소개" />
+
+					<div class="pr_img">
+						{?mb_picture}<img class="s_tea_view" src="{MY_URL}/dir_img/teacher_img/{mb_picture}" alt="김기홍교수님" />{:}<img class="s_tea_view" src="" alt="사진없음" />{/}
+						<span>
+							<h4>{mb_name} 교수님</h4>
+							<ul>
+							{@lt_name}
+								<li>{.lt_names}</li>
+							{/}
+							</ul>
+						</span>
+					</div>
+
+					<!-- 교수님약력 시작 -->
+					<h3 class="pr_clear"><img src="images/professor/pr_subtitle03.gif" alt="교수님약력" /></h3>
+
+					<ul class="pr_list">
+						<li>{mb_biography}</li>
+					</ul>
+					<!-- 교수님약력 끝 -->
+
+					<!-- 논문/저서 시작 -->
+					<h3><img src="images/professor/pr_subtitle04.gif" alt="논문/저서" /></h3>
+
+					<ul class="pr_list">
+						<li>{mb_paper}</li>
+					</ul>
+					<!-- 논문/저서 끝 -->
+
+			<p class="btn_list"><input type="button" name="bod_btn_gray" class="bod_btn_gray" value="목록" onclick="send_list('{page}','{ca_num}')" /></p>
+			</div>
+			<!-- 교수소개 끝 -->
+			<!-- LS 우측 컨텐츠 로그인 끝 -->
+
+		</div>
+		<!-- LS 우측 컨텐츠  영역 끝 -->

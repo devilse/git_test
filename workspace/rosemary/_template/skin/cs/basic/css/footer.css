@@ -1,0 +1,18 @@
+
+/* 풋 영역 */
+
+
+/* 풋 상단 메뉴*/
+.ft_menu {width:950px; height:36px; margin:0 auto}
+.ft_menu li {height:10px;float:left; margin-top:12px; padding:0 12px; border-right:1px solid #6d6d6d;font-size:11px;}
+.ft_menu li a{color:#6d6d6d}
+.ft_menu p {float:right;margin-top:10px}
+.ft_menu p span{display:block; text-align:right; float:left; margin-left:15px}
+.ft_menu span img {vertical-align:-2px; margin-left:5px}
+
+/* 주소. 카피라이트*/
+.ft_textarea {width:100%; height:130px;margin:0 auto; background:#f3f3f3}
+.ft_text {width:950px;margin:0 auto; font-size:11px; color:#858585; line-height:140%; padding:20px 0 0 20px}
+.copyright{margin-top:12px}
+.copyright em {font-style:normal; color:#f30} 
+
